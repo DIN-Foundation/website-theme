@@ -168,6 +168,22 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "podcasts_link": {
+                "type": "text",
+                "default": ""
+            },
+            "linkedin_link": {
+                "type": "text",
+                "default": ""
+            },
+            "twitter_link": {
+                "type": "text",
+                "default": ""
+            },
+            "chat_link": {
+                "type": "text",
+                "default": ""
             }
         }
     },

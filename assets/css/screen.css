@@ -2412,3 +2412,16 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
+
+/* 90. Own style - footer
+/* ---------------------------------------------------------- */
+.subscribe-link{
+ padding: 0px 15px 0px 15px;
+}
+
+.media-links{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+ 

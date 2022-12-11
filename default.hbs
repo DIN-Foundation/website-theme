@@ -74,9 +74,37 @@
     <footer class="site-footer outer">
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <div>
+                <div class="media-links">
+                {{#if @custom.podcast_link}}
+                    <a href="{{@custom.podcast_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/podcast"}}
+                        <span class="subscribe-text">Podcast</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.chat_link}}
+                    <a href="{{@custom.chat_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/chat"}}
+                        <span class="subscribe-text">Chat with us</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.twitter_link}}
+                    <a href="{{@custom.twitter_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/twitter"}}
+                        <span class="subscribe-text">Twitter</span>
+                    </a>
+                {{/if}}
+                {{#if @custom.linkedin_link}}
+                    <a href="{{@custom.linkedin_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+                        {{> "icons/linkedin"}}
+                        <span class="subscribe-text">LinkedIn</span>
+                    </a>
+                {{/if}}
+            </div>
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
+            </div>
             <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>
     </footer>
