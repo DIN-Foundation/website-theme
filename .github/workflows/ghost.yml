@@ -12,7 +12,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
       - run: yarn pretest
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
