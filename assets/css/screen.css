@@ -2445,8 +2445,12 @@ the right place. Onward!
 .members-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5px;
+  justify-content: space-evenly;
+}
+
+.member {
+  display: flex;
+  align-items: center;
 }
 
 .members-flex {
@@ -2454,10 +2458,7 @@ the right place. Onward!
   flex-wrap: wrap;
   justify-content: center;
 }
-.member-card-image-link{
-  display: flex;
-  align-items: center;
-}
+
 
 .member-card-image {
   max-width: 270px;
