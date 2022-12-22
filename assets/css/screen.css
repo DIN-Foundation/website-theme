@@ -2424,4 +2424,43 @@ the right place. Onward!
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.members-title {
+  text-align: center;
+}
+
+.member-card-image-title{
+  visibility: hidden;
+  position: relative;
+  top: -25px;
+  left: 75px;
+  display: inline-block;
+  background-color: white;
+}
+
+.member-card-image-link:hover > p{
+  visibility:visible;
+}
+
+.members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.members-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member-card-image {
+  max-height: 120px;
+  min-height: 120px;
+}
+
+.sponsor-section {
+  padding-bottom: 30px
+}
  

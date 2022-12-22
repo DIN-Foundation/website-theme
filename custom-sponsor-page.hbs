@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+<main id="site-main" class="site-main">
+<article class="article {{post_class}}">
+    <section class="gh-content gh-canvas sponsor-section">
+      <h1 class="members-title">Sponsors</h1>
+        {{#get "pages" limit="all" filter="primary_tag:sponsorship"}}
+          <div class="{{#match pages.length ">" 2}}members-grid{{/match}}{{#match pages.length "<" 3}}members-flex{{/match}}">
+        
+            {{#foreach pages}}
+                {{> "membership-card"}}
+            {{/foreach}}
+          </div>
+        {{/get}}
+    </section>
+    <section class="gh-content gh-canvas">
+      <h1 class="members-title">Members</h1>
+        {{#get "pages" limit="all" filter="primary_tag:memberships" order="published_at desc"}}
+          <div class="{{#match pages.length ">" 2}}members-grid{{/match}}{{#match pages.length "<" 3}}members-flex{{/match}}">
+            {{#foreach pages}}
+                {{> "membership-card"}}
+            {{/foreach}}
+          </div>
+        {{/get}}
+      </div>
+    </section>
+
+</article>
+</main>
