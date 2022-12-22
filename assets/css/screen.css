@@ -2454,10 +2454,14 @@ the right place. Onward!
   flex-wrap: wrap;
   justify-content: center;
 }
+.member-card-image-link{
+  display: flex;
+  align-items: center;
+}
 
 .member-card-image {
-  max-height: 120px;
-  min-height: 120px;
+  max-width: 270px;
+  min-width: 120px;
 }
 
 .sponsor-section {
