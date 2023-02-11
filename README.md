@@ -1,6 +1,21 @@
 # DIN-Casper
 This is a DIN modified casper theme
 All old info is below
+# How to develop
+Make sure to run `yarn dev` in the theme folder.
+Start the ghost instance with ghost installed terminal program, via `ghost start`
+This holds local data on specific theme
+
+## Prefixed stuff
+Starting a new theme it is needed to add this to the ghost instance with symlink.
+[This comment and trello card](https://trello.com/c/9u5SLtsw/385-convert-posting-to-ghost#comment-639651a9abbf090224c30daf) assiste me in this journey.
+
+# Documentation
+## Comments
+Our theme supports commenting and reactions. Thanks to Hyvor.
+We got it to work because of [this article](https://hyvor.com/blog/comments-for-ghost-blog)
+Sign in to this page [https://talk.hyvor.com/console/](https://talk.hyvor.com/console/)
+
 # Old casper
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.

@@ -114,6 +114,38 @@ into the {body} tag of the default.hbs template --}}
 {{/unless}}
 {{/if}}
 
+<div id="hyvor-talk-view"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script>
+    var HYVOR_TALK_WEBSITE = 8448,
+        HYVOR_TALK_PRIVATE_KEY = '8ea751ebcb3155bdbd081b0971c87023',
+        HYVOR_TALK_CONFIG = {
+            url: false,
+            id: "{{comment_id}}"
+        };
+    {{#if @member}}
+        var userData = {
+            id: "{{ @member.uuid }}",
+            name: "{{ @member.name}}",
+            email: "{{ @member.email}}",
+        };
+    {{else}}
+        var userData = {};
+    {{/if}}
+    userData = btoa( JSON.stringify( userData ) )
+    var hash = CryptoJS.HmacSHA1(userData, HYVOR_TALK_PRIVATE_KEY).toString();
+    HYVOR_TALK_CONFIG.sso = {
+        hash: hash,
+        userData: userData,
+        loginURL: location.href + "#/portal/login",
+        signupURL: location.href + "#/portal/signup"
+    }
+    var script = document.createElement("script");
+    script.src = "//talk.hyvor.com/web-api/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+</script>
+
 
 {{!-- Read more links, just above the footer --}}
 {{#if @custom.show_recent_posts_footer}}
