@@ -2438,10 +2438,6 @@ the right place. Onward!
   background-color: white;
 }
 
-.member-card-image-link:hover > p{
-  visibility:visible;
-}
-
 .members-grid {
   display: flex;
   flex-wrap: wrap;
@@ -2467,5 +2463,10 @@ the right place. Onward!
 
 .sponsor-section {
   padding-bottom: 30px
+}
+
+.intro-sponsor-section {
+    text-align: center;
+    padding-bottom: 30px
 }
  

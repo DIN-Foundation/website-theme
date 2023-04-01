@@ -5,14 +5,17 @@ into the {body} tag of the default.hbs template --}}
 
 <main id="site-main" class="site-main">
 <article class="article {{post_class}}">
-    <section class="gh-content gh-canvas">
+  {{#post}}
+
+    <section class="gh-content gh-canvas intro-sponsor-section">
         {{content}}
     </section>
+
+  {{/post}}
     <section class="gh-content gh-canvas sponsor-section">
       <h1 class="members-title">Sponsors</h1>
         {{#get "pages" limit="all" filter="primary_tag:sponsorship"}}
           <div class="{{#match pages.length ">" 2}}members-grid{{/match}}{{#match pages.length "<" 3}}members-flex{{/match}}">
-        
             {{#foreach pages}}
                 {{> "membership-card"}}
             {{/foreach}}
@@ -31,5 +34,7 @@ into the {body} tag of the default.hbs template --}}
       </div>
     </section>
 
+
 </article>
 </main>
+
