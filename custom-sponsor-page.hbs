@@ -5,6 +5,9 @@ into the {body} tag of the default.hbs template --}}
 
 <main id="site-main" class="site-main">
 <article class="article {{post_class}}">
+    <section class="gh-content gh-canvas">
+        {{content}}
+    </section>
     <section class="gh-content gh-canvas sponsor-section">
       <h1 class="members-title">Sponsors</h1>
         {{#get "pages" limit="all" filter="primary_tag:sponsorship"}}
