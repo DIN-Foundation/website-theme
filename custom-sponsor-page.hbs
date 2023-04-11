@@ -13,7 +13,7 @@ into the {body} tag of the default.hbs template --}}
 
   {{/post}}
     <section class="gh-content gh-canvas sponsor-section">
-      <h1 class="members-title">Sponsors</h1>
+      <h1 class="members-title">Sponsorer</h1>
         {{#get "pages" limit="all" filter="primary_tag:sponsorship"}}
           <div class="{{#match pages.length ">" 2}}members-grid{{/match}}{{#match pages.length "<" 3}}members-flex{{/match}}">
             {{#foreach pages}}
@@ -23,7 +23,7 @@ into the {body} tag of the default.hbs template --}}
         {{/get}}
     </section>
     <section class="gh-content gh-canvas">
-      <h1 class="members-title">Members</h1>
+      <h1 class="members-title">Medlemmer</h1>
         {{#get "pages" limit="all" filter="primary_tag:memberships" order="published_at desc"}}
           <div class="{{#match pages.length ">" 2}}members-grid{{/match}}{{#match pages.length "<" 3}}members-flex{{/match}}">
             {{#foreach pages}}
